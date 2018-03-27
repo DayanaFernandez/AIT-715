@@ -5,45 +5,6 @@
 </head>
 
 <style type="text/css">
-.login-page{
-    max-width: 500px;
-    padding: 15px;
-    margin: auto;
-}
-
-.form{
-    position: relative;
-    background: darkblue;
-    z-index: 1;
-    max-width: 500px;
-    margin: auto;
-    padding: 15px;
-    text-align: center;
-}
-.form input{
-    font-family: "Roboto", sans-serif;
-    outline: 1;
-    background: #f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px; 
-}
-.form button{
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: #4CAF;
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #ffffff;
-    font-size: 14px;
-    cursor: pointer;
-}
-
 body {background-color:#cde;}
 * {color:darkblue;}
 * {font-family:"Verdana";}
@@ -54,6 +15,58 @@ body {background-color:#cde;}
 #nav5 {float: left; margin-left: 7px; margin-right: 7px; }
 #nav6 {float: left; margin-left: 7px; margin-right: 7px; }
 #title {text-align:center;}
+
+.login_page{
+    width: 360px;
+    padding: 10% 0 0;
+    margin: auto;}
+
+.form{
+    position: relative;
+    z-index: 1;
+    background: darkblue;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;}
+
+.form input{
+    font-family: "Roboto", sans-serif;
+    outline: 1;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;}
+
+    .form button{
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: #4CAF;
+        width: auto;
+        border: 0;
+        padding: 15px;
+        color: #ffffff;
+        font-size: 14px;
+        cursor: pointer;}
+
+    .form button:hover,.form button:active{
+        background: #4CAF;}
+
+    .form .message{
+        margin: 15px 0 0;
+        color: aliceblue;
+        font-size: 14px;}
+
+    .form .message a{
+        color: #4CAF;
+        text-decoration: none;}
+    
+    .form .registration-form{
+        display: none;}
 </style>
 
 <script>
@@ -86,9 +99,8 @@ document.write('<h3>' + greeting + '</h3>');
 
 <div class="login-page">
 <div class="form">
-<form action="https://tigerweb.towson.edu/dferna2/new_account.html" method=get>
 	<form class="registration-form">
-	<input type="text" placeholder="User name"/>
+	<input type="text" placeholder="Username"/>
 	<input type="text" placeholder="Password"/>
 	<input type="text" placeholder="Email"/>
 	<input type="text" placeholder="First name"/>
@@ -96,20 +108,25 @@ document.write('<h3>' + greeting + '</h3>');
 	<input type="text" placeholder="Birthdate"/>
 	<input type="text" placeholder="Phone number"/>
 	<button>Create Account</button>
+	<p class="message">Returning customer? <a href="#">Login</a></p>
 	</form>
 
-<br><br>
-
-	<form action="https://tigerweb.towson.edu/dferna2/return_customer.html" method=get>
-	<form class="login form">
-	<input type="text" placeholder="user name"/>
-	<input type="password" placeholder="password"/>
-	<button>login</button>
+	<form class="login-form">
+	<input type="text" placeholder="Username"/>
+	<input type="text" placeholder="Password"/>
+	<button>Login</button>
+	<p class="message">New customer? <a href="#">Create an account</a></p>
 	</form>
-</div>
-</div>
+	</div>
+	</div>
 
-<br><br>
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+
+<script>
+$('.message a').click(function(){
+$('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+</script>
 
 <footer>&copy; Fernandez Translation Services 2018</footer>
 

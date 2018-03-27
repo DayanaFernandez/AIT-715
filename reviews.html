@@ -1,21 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><title>Reviews</title>
-<link href="fernandez.css" type="text/css" rel="stylesheet" />
 <meta charset="UTF-8">
 </head>
+
+<style type="text/css">
+body {background-color:#cde;}
+* {color:darkblue;}
+* {font-family:"Verdana";}
+#nav1 {float: left; margin-left: 7px; margin-right: 7px; }
+#nav2 {float: left; margin-left: 7px; margin-right: 7px; }
+#nav3 {float: left; margin-left: 7px; margin-right: 7px; }
+#nav4 {float: left; margin-left: 7px; margin-right: 7px; }
+#nav5 {float: left; margin-left: 7px; margin-right: 7px; }
+#nav6 {float: left; margin-left: 7px; margin-right: 7px; }
+#title {text-align:center;}
+</style>
+
+<script>
+var today = new Date ();
+var hourNow = today.getHours();
+var greeting;
+if (hourNow > 18) {
+greeting = 'Good evening & welcome!';
+} else if (hourNow > 12) {
+greeting = 'Good afternoon & welcome!';
+} else if (hourNow > 0) {
+greeting = 'Good morning & welcome!';
+} else {
+greeting = 'Welcome!';
+}
+document.write('<h3>' + greeting + '</h3>');
+</script>
+
 <body>
-<div id="nav1"><a href=http://ait616.com/dferna2/finalproject/colombia.html>Register/Login</a></div>
-<div id="nav2"><a href=http://ait616.com/dferna2/finalproject/colombia.html>Home</a></div>
-<div id="nav4"><a href=http://ait616.com/dferna2/finalproject/colombia.html>Costs</a></div>
-<div id="nav5"><a href=http://ait616.com/dferna2/finalproject/colombia.html>Contact Me</a></div>
+<div id="nav2"><a href=https://tigerweb.towson.edu/dferna2/home.html>Home</a></div>
+<div id="nav1"><a href=https://tigerweb.towson.edu/dferna2/register.html>Register/Login</a></div>
+<div id="nav4"><a href=https://tigerweb.towson.edu/dferna2/costs.html>Costs</a></div>
+<div id="nav5"><a href=https://tigerweb.towson.edu/dferna2/contact.html>Contact Me</a></div>
 
 <br>
 <h1 id="title">Reviews</h1>
 
-<p>Please feel free to leave any comments about the services you recieved. All feedback is welcome, but I kindly ask that you keep it respectful and appropriate. If you have any any concerns, please <a href=http://ait616.com/dferna2/finalproject/colombia.html>contact</a></div> me and I will be glad to address them. Thank you for taking the time to leave your comments!</p>
+<p>Please feel free to leave any comments about the services you recieved. All feedback is welcome, but I kindly ask that you keep it respectful and appropriate. If you have any any concerns, please <a href="mailto:dayiscolombianita82@yahoo.com">email</a> me and I will be glad to address them. Thank you for taking the time to leave your comments!</p>
 
-<br><br><br>
+<div id="wpac-comment"></div>
+<script type="text/javascript">
+wpac_init = window.wpac_init || [];
+wpac_init.push({widget: 'Comment', id: 10413});
+(function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = 'https://embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+})();
+</script>
+<a href="https://widgetpack.com" class="wpac-cr">Comments System WIDGET PACK</a>
+
+<br><br>
 
 <footer>&copy; Fernandez Translation Services 2018</footer>
 

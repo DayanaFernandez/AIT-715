@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><title>Contact Me</title>
-<link href="fernandez.css" type="text/css" rel="stylesheet" />
 <meta charset="UTF-8">
 </head>
+
+<style type="text/css">
+body {background-color:#cde;}
+* {color:darkblue;}
+* {font-family:"Verdana";}
+#nav1 {float: left; margin-left: 7px; margin-right: 7px; }
+#nav2 {float: left; margin-left: 7px; margin-right: 7px; }
+#nav3 {float: left; margin-left: 7px; margin-right: 7px; }
+#nav4 {float: left; margin-left: 7px; margin-right: 7px; }
+#nav5 {float: left; margin-left: 7px; margin-right: 7px; }
+#nav6 {float: left; margin-left: 7px; margin-right: 7px; }
+#title {text-align:center;}
+</style>
+
+<script>
+var today = new Date ();
+var hourNow = today.getHours();
+var greeting;
+if (hourNow > 18) {
+greeting = 'Good evening & welcome!';
+} else if (hourNow > 12) {
+greeting = 'Good afternoon & welcome!';
+} else if (hourNow > 0) {
+greeting = 'Good morning & welcome!';
+} else {
+greeting = 'Welcome!';
+}
+document.write('<h3>' + greeting + '</h3>');
+</script>
+
 <body>
-<div id="nav1"><a href=http://ait616.com/dferna2/finalproject/colombia.html>Register/Login</a></div>
-<div id="nav2"><a href=http://ait616.com/dferna2/finalproject/huila.html>Home</a></div>
-<div id="nav4"><a href=http://ait616.com/dferna2/finalproject/pageant.html>Costs</a></div>
-<div id="nav6"><a href=http://ait616.com/dferna2/finalproject/faq.html>Reviews</a></div>
+<div id="nav2"><a href=https://tigerweb.towson.edu/dferna2/home.html>Home</a></div>
+<div id="nav1"><a href=https://tigerweb.towson.edu/dferna2/register.html>Register/Login</a></div>
+<div id="nav4"><a href=https://tigerweb.towson.edu/dferna2/costs.html>Costs</a></div>
+<div id="nav6"><a href=https://tigerweb.towson.edu/dferna2/reviews.html>Reviews</a></div>
 
 <br>
 <h1 id="title">Contact Me</h1>
 
-<p>If you need to contact me for any reason, you may do so via <a href="mailto:dayiscolombianita82@yahoo.com">email</a> or by using the form below.</p>
+<p>If you need to contact me for any reason, you may do so via <a href="mailto:dayiscolombianita82@yahoo.com">email</a>. You may also leave comments on my <a href=https://tigerweb.towson.edu/dferna2/reviews.html>reviews</a> page. 
 
-<form action="mailto:dayiscolombianita82@yahoo.com" method=get>
-<label for=“comments”>
-Comments
-</label>
-<br>
-<textarea rows=4 cols=40 id=“comments”>
-</textarea>
-<br>
-<input type=submit value=Submit />
-</form>
-
-<br><br><br>
+<br><br>
 
 <footer>&copy; Fernandez Translation Services 2018</footer>
 
