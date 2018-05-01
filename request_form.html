@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Home</title>
+	<title>Request Services</title>
 	<style type="text/css">body {background-color:#cde;}
 * {color:darkblue;}
 * {font-family:"Verdana";}
@@ -12,8 +12,6 @@
 #nav5 {float: left; margin-left: 7px; margin-right: 7px; }
 #nav6 {float: left; margin-left: 7px; margin-right: 7px; }
 #title {text-align:center;}
-img.dayanaframe {width: 500px; height: 550px;}
-img.align-center{display: block; margin:0px auto;}
 	</style>
 </head>
 <script>
@@ -32,9 +30,9 @@ greeting = 'Welcome!';
 document.write('<h3>' + greeting + '</h3>');
 </script>
 <body>
-<div id="nav1"><a href="http://www.dayanafernandez.com/register.html">Register/Login</a></div>
+<div id="nav2"><a href="http://www.dayanafernandez.com/home.html">Home</a></div>
 
-<div id="nav2"><a href="http://www.dayanafernandez.com/request_form.html">Request Services</a></div>
+<div id="nav1"><a href="http://www.dayanafernandez.com/register.html">Register/Login</a></div>
 
 <div id="nav4"><a href="http://www.dayanafernandez.com/costs.html">Costs</a></div>
 
@@ -44,13 +42,40 @@ document.write('<h3>' + greeting + '</h3>');
 
 <div id="nav3"><a href="http://www.dayanafernandez.com/previous_work.html">Previous Work</a></div>
 <br>
-<h1 id="title">Welcome to Fernandez Translation Services!</h1>
+<h1 id="title">Request Services</h1>
 
-<p><img alt="picture in frame" class="align-center dayanaframe" src="dayanaframe.jpg" /></p>
+<p></p>
 
-<p>Hi! Thank you for visiting! I am here to provide quality translations from English to Spanish and vice versa. I have been interpreting for 32 years and translating documentation for about 15 years. I have a B.A. in Spanish Literature, as well as a Master&#39;s in teaching Spanish, both from Towson University. Thank you in advance for your business!</p>
+<p></p>
 
-<footer>&copy; Fernandez Translation Services 2018</footer>
-</body>
+<p></p>
+
+<p>Please fill out the form so that I may serve you as efficiently as possible. In your message please include the following:</p>
+<ul>
+<li>The number of pages to be translated</li>
+<li>The language that your original document is in</li>
+<li>The subject of your document</li>
+</ul>
+
+<form method="post" name="myemailform" action="form-to-email.php">
+	<p>
+		<label for='name'>Enter Name: </label><br>
+		<input type="text" name="name">
+	</p>
+	<p>
+		<label for='email'>Enter Email Address:</label><br>
+		<input type="text" name="email">
+	</p>
+	<p>
+		<label for='message'>Enter Message:</label> <br>
+		<textarea name="message"></textarea>
+	</p>
+	<input type="submit" name='submit' value="submit">
+</form>
+<script language="JavaScript">
+var frmvalidator  = new Validator("myemailform");
+frmvalidator.addValidation("name","req","Please provide your name"); 
+frmvalidator.addValidation("email","req","Please provide your email"); 
+frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+</script></body>
 </html>
-

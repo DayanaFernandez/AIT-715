@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><title>Register/Login</title>
-<meta charset="UTF-8">
-</head>
-
-<style type="text/css">
-.login-page{
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Register/Login</title>
+	<style type="text/css">.login-page{
     max-width: 500px;
     padding: 15px;
     margin: auto;
@@ -54,8 +51,8 @@ body {background-color:#cde;}
 #nav5 {float: left; margin-left: 7px; margin-right: 7px; }
 #nav6 {float: left; margin-left: 7px; margin-right: 7px; }
 #title {text-align:center;}
-</style>
-
+	</style>
+</head>
 <script>
 var today = new Date ();
 var hourNow = today.getHours();
@@ -71,14 +68,22 @@ greeting = 'Welcome!';
 }
 document.write('<h3>' + greeting + '</h3>');
 </script>
-
 <body>
-<div id="nav2"><a href=https://tigerweb.towson.edu/dferna2/home.html>Home</a></div>
-<div id="nav4"><a href=https://tigerweb.towson.edu/dferna2/costs.html>Costs</a></div>
-<div id="nav5"><a href=https://tigerweb.towson.edu/dferna2/contact.html>Contact Me</a></div>
-<div id="nav6"><a href=https://tigerweb.towson.edu/dferna2/reviews.html>Reviews</a></div>
+<div id="nav2"><a href="http://www.dayanafernandez.com/home.html">Home</a></div>
+
+<div id="nav1"><a href="http://www.dayanafernandez.com/request_form.html">Request Services</a></div>
+
+<div id="nav4"><a href="http://www.dayanafernandez.com/costs.html">Costs</a></div>
+
+<div id="nav5"><a href="http://www.dayanafernandez.com/contact.html">Contact Me</a></div>
+
+<div id="nav6"><a href="http://www.dayanafernandez.com/reviews.html">Reviews</a></div>
+
+<div id="nav3"><a href="http://www.dayanafernandez.com/previous_work.html">Previous Work</a></div>
 <br>
 <h1 id="title">Register/Login</h1>
+
+<p></p>
 
 <p><b>New customers:</b> Please feel free to create an account.</p>
 
@@ -86,32 +91,14 @@ document.write('<h3>' + greeting + '</h3>');
 
 <div class="login-page">
 <div class="form">
-<form action="https://tigerweb.towson.edu/dferna2/new_account.html" method=get>
-	<form class="registration-form">
-	<input type="text" placeholder="User name"/>
-	<input type="text" placeholder="Password"/>
-	<input type="text" placeholder="Email"/>
-	<input type="text" placeholder="First name"/>
-	<input type="text" placeholder="Last name"/>
-	<input type="text" placeholder="Birthdate"/>
-	<input type="text" placeholder="Phone number"/>
-	<button>Create Account</button>
-	</form>
+<form action="database_new.php" method="post"><input name="user" placeholder="User name" type="text" /> <input name="password" placeholder="Password" type="text" /> <input name="email" placeholder="Email" type="text" /> <input name="first" placeholder="First name" type="text" /> <input name="last" placeholder="Last name" type="text" /> <input name="birthdate" placeholder="Birthdate" type="text" /> <input name="phone" placeholder="Phone number" type="text" /><button name="submit" type="submit">Create Account</button></form>
+&nbsp;
 
-<br><br>
-
-	<form action="https://tigerweb.towson.edu/dferna2/return_customer.html" method=get>
-	<form class="login form">
-	<input type="text" placeholder="user name"/>
-	<input type="password" placeholder="password"/>
-	<button>login</button>
-	</form>
+<form action="customer.php" method="post"><input name="user" placeholder="user name" type="text" /> <input name="password" placeholder="password" type="password" /><button name="submit" type="submit">login</button></form>
 </div>
 </div>
-
-<br><br>
 
 <footer>&copy; Fernandez Translation Services 2018</footer>
-
 </body>
 </html>
+
